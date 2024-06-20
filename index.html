@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-dark">
+    <div class="overlay"></div>
+
+    <div class="spotify-player">
+        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX9sIqqvKsjG8" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+    <div class="full-controls">
+        <div class="icons">
+            <a href="https://github.com/your-profile" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/your-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="dark-mode-toggle is-active" id="dark-mode-toggle"><i class="fas fa-moon"></i></div>
+        <div class="fullscreen" id="fullscreen"><i class="fas fa-expand"></i></div>
+    </div>
+
+    <div class="content">
+        <div class="tabs">
+            <button class="tab active" data-tab="pomodoro">pomodoro</button>
+            <button class="tab" data-tab="short-break">short break</button>
+            <button class="tab" data-tab="long-break">long break</button>
+        </div>
+        <div class="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="controls">
+            <button id="start">start</button>
+            <button id="reset"><i class="fas fa-redo"></i></button>
+            <button id="settings"><i class="fas fa-cog"></i></button>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal" id="settings-modal">
+        <div class="modal-content">
+            <div class="settings-tabs">
+                <button class="settings-tab active" data-tab="general">General</button>
+                <button class="settings-tab" data-tab="timers">Timers</button>
+                <button class="settings-tab" data-tab="sounds">Sounds</button>
+            </div>
+            <div class="settings-content" id="general">
+                <div class="setting-option">
+                    <i class="fas fa-image"></i> <button id="upload"><i class="fas fa-upload"></i> Upload Background</button>
+                    <input type="file" id="upload-input" accept="image/*" style="display: none;">
+                </div>
+                <div class="setting-option">
+                    <i class="fas fa-palette"></i> <label>Choose Wallpaper: </label>
+                    <div id="wallpaper-grid"></div>
+                </div>
+            </div>
+            <div class="settings-content" id="timers" style="display: none;">
+                <div class="timer-settings">
+                    <div class="setting">
+                        <label for="pomodoro-time">Pomodoro</label>
+                        <input type="number" id="pomodoro-time" min="1" max="60" value="25">
+                        <span>minutes</span>
+                    </div>
+                    <div class="setting">
+                        <label for="short-break-time">Short Break</label>
+                        <input type="number" id="short-break-time" min="1" max="30" value="5">
+                        <span>minutes</span>
+                    </div>
+                    <div class="setting">
+                        <label for="long-break-time">Long Break</label>
+                        <input type="number" id="long-break-time" min="1" max="60" value="15">
+                        <span>minutes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-content" id="sounds" style="display: none;">
+                <div class="sound-settings">
+                    <div class="setting">
+                        <label>Select Alarm Sound</label>
+                        <select id="alarm-sound">
+                            <option value="audio/sound1.mp3">Sound 1</option>
+                            <option value="audio/sound2.mp3">Sound 2</option>
+                            <option value="audio/sound3.mp3">Sound 3</option>
+                            <option value="audio/sound4.mp3">Sound 4</option>
+                            <option value="audio/sound5.mp3">Sound 5</option>
+                        </select>
+                    </div>
+                    <div class="setting">
+                        <label>Sound Alert</label>
+                        <input type="checkbox" id="sound-alert-toggle">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button id="close-modal">Close</button>
+                <button id="reset-settings">Reset</button>
+                <button id="save-settings">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Modal -->
+    <div class="modal" id="notification-modal">
+        <div class="modal-content">
+            <h2>Time's up!</h2>
+            <p>Great job! Take a break or start another session.</p>
+            <button id="notification-ok-button">OK</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
