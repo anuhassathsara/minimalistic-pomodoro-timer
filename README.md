@@ -1,17 +1,30 @@
 # Minimalistic Pomodoro Timer
 
-A simple, minimalistic Pomodoro timer web application to help improve productivity by following the Pomodoro Technique.
+A simple, minimalistic Pomodoro timer web application designed to boost productivity using the Pomodoro Technique.
 
 ## Features
 
-- Simple and intuitive user interface
-- Start and reset functionality
-- 25-minute countdown timer
+- **Simple and intuitive user interface**
+- **Start, reset, and switch between different modes (Pomodoro, Short Break, Long Break)**
+- **Responsive design for optimal viewing on all devices**
 
-## Installation
+## How to Start the Web App Locally
 
-To get a local copy up and running, follow these simple steps:
+1. **Download the Project:**
+   - Clone the repository or download the ZIP file of the project.
+   
+2. **Open Command Line:**
+   - Navigate to the project directory using the command line.
 
-1. Clone the repository
+3. **Start a Local Server:**
    ```sh
-   git clone https://github.com/anuhassathsara/minimalistic-pomodoro-timer.git
+   cd [your-file-path]
+   python -m http.server 8000
+
+4. **Open in Browser:**
+   - Open your web browser and go to http://localhost:8000/.
+  
+## How to Start the Web App Online
+1. **Access the Live Web App:**
+   - Use this link to open the web app online: https://anuhassathsara.github.io/minimalistic-pomodoro-timer/
+  
