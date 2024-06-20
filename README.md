@@ -2,6 +2,9 @@
 
 A simple, minimalistic Pomodoro timer web application designed to boost productivity using the Pomodoro Technique.
 
+**Access the Live Web App:**
+- Use this link to open the web app online: https://anuhassathsara.github.io/pomotimer/
+
 ## Features
 
 - **Simple and intuitive user interface**
@@ -26,5 +29,5 @@ A simple, minimalistic Pomodoro timer web application designed to boost producti
   
 ## How to Start the Web App Online
 1. **Access the Live Web App:**
-   - Use this link to open the web app online: https://anuhassathsara.github.io/minimalistic-pomodoro-timer/
+   - Use this link to open the web app online: https://anuhassathsara.github.io/pomotimer/
   
